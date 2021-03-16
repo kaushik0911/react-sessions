@@ -1,0 +1,3 @@
+type below command inside the project foler
+
+browser-sync start --server --files "**/*.html"
