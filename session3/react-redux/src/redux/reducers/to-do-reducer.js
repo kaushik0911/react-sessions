@@ -5,12 +5,13 @@ const initialState = {
 }
 
 function todoReducer(state = initialState, action) {
-  switch (action) {
+  switch (action.type) {
     case ADD_TODO:
-      Object.assign({}, state, {
+      return Object.assign({}, state, {
         todoList: state.todoList.concat(action.payload)
       });
-      break;
+    default:
+      return state;
   }
 }
 
