@@ -1,7 +1,7 @@
 import { ADD_TODO } from '../actions/action-type';
 
 const initialState = {
-  todoList: [{ id: 1, title: 'test'}]
+  todoList: [{ id: 1, title: 'test1'}, { id: 2, title: 'test2'}]
 }
 
 function todoReducer(state = initialState, action) {
