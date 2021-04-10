@@ -13,7 +13,7 @@ function imageReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_IMAGE:
       return Object.assign({}, state, {
-        todoList: state.imageList.concat(action.payload)
+        imageList: state.imageList.concat(action.payload)
       });
     default:
       return state;
