@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
-  return { todoList: state.todoReducer.todoList }
+  return { imageList: state.imageReducer.imageList }
 }
 
-class Todo extends Component {
+class ImageList extends Component {
   constructor(props){
     super(props);
   }
@@ -15,9 +15,9 @@ class Todo extends Component {
       <div>
         <ul>
           {
-            this.props.todoList.map(item => {
+            this.props.imageList.map(item => {
               return (
-                <li key={item.id}>{item.title}</li>
+                <img src={item.imageURL}/>
               )
             })
           }
@@ -27,4 +27,4 @@ class Todo extends Component {
   }
 }
 
-export default connect(mapStateToProps,)(Todo);
+export default connect(mapStateToProps)(ImageList);
